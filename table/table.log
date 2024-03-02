@@ -1,0 +1,267 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.1)  2 MAR 2024 21:45
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**table.tex
+(./table.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cls
+Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files stan
+dalone
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count188
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\sa@internal=\count189
+\c@sapage=\count190
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cfg
+File: standalone.cfg 2022/10/10 v1.3b Default configuration file for 'standalon
+e' class
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count191
+\c@section=\count192
+\c@subsection=\count193
+\c@subsubsection=\count194
+\c@paragraph=\count195
+\c@subparagraph=\count196
+\c@figure=\count197
+\c@table=\count198
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+\sa@box=\box51
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tabularray/tabularray.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-02-20 L3 programming layer (loader) 
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count199
+\l__pdf_internal_box=\box52
+))
+Package: tabularray 2024-02-16 v2024A Typeset tabulars and arrays with LaTeX3
+\l__tblr_a_int=\count266
+\l__tblr_c_int=\count267
+\l__tblr_r_int=\count268
+\l__tblr_d_dim=\dimen141
+\l__tblr_h_dim=\dimen142
+\l__tblr_o_dim=\dimen143
+\l__tblr_p_dim=\dimen144
+\l__tblr_q_dim=\dimen145
+\l__tblr_r_dim=\dimen146
+\l__tblr_s_dim=\dimen147
+\l__tblr_t_dim=\dimen148
+\l__tblr_v_dim=\dimen149
+\l__tblr_w_dim=\dimen150
+\l__tblr_a_box=\box53
+\l__tblr_b_box=\box54
+\l__tblr_c_box=\box55
+\l__tblr_d_box=\box56
+\g__tblr_table_count_int=\count269
+\c@rownum=\count270
+\c@colnum=\count271
+\c@rowcount=\count272
+\c@colcount=\count273
+\abovesep=\dimen151
+\belowsep=\dimen152
+\leftsep=\dimen153
+\rightsep=\dimen154
+\g_tblr_level_int=\count274
+\g__tblr_data_row_key_count_int=\count275
+\g__tblr_data_column_key_count_int=\count276
+\g__tblr_data_cell_key_count_int=\count277
+\g__tblr_array_int=\count278
+\l__tblr_key_count_int=\count279
+\l__tblr_key_quotient_int=\count280
+\l__tblr_key_quotient_two_int=\count281
+\l__tblr_key_remainder_int=\count282
+\g__tblr_data_str_value_count_int=\count283
+\rulewidth=\dimen155
+\l__tblr_strut_dp_dim=\dimen156
+\l__tblr_strut_ht_dim=\dimen157
+\g__tblr_cell_wd_dim=\dimen158
+\g__tblr_cell_ht_dim=\dimen159
+\g__tblr_cell_head_dim=\dimen160
+\g__tblr_cell_foot_dim=\dimen161
+\l__column_target_dim=\dimen162
+\l__tblr_caption_box=\box57
+\l__tblr_caption_left_box=\box58
+\l__tblr_row_head_box=\box59
+\l__tblr_row_foot_box=\box60
+\l__tblr_row_head_foot_dim=\dimen163
+\tablewidth=\dimen164
+\l__tblr_table_firsthead_box=\box61
+\l__tblr_table_middlehead_box=\box62
+\l__tblr_table_lasthead_box=\box63
+\l__tblr_table_firstfoot_box=\box64
+\l__tblr_table_middlefoot_box=\box65
+\l__tblr_table_lastfoot_box=\box66
+\l__tblr_remain_height_dim=\dimen165
+\l__tblr_long_from_int=\count284
+\l__tblr_long_to_int=\count285
+\l__tblr_curr_i_int=\count286
+\l__tblr_prev_i_int=\count287
+\l__tblr_table_page_int=\count288
+\l__tblr_table_head_box=\box67
+\l__tblr_table_foot_box=\box68
+\l__tblr_table_head_foot_dim=\dimen166
+\l__tblr_table_head_body_foot_dim=\dimen167
+\l__tblr_table_box=\box69
+\l__tblr_table_hlines_box=\box70
+\l__tblr_hline_box=\box71
+\l__tblr_row_box=\box72
+\l__tblr_col_o_wd_dim=\dimen168
+\l__tblr_col_b_wd_dim=\dimen169
+\l__tblr_hline_leftskip_dim=\dimen170
+\l__tblr_hline_rightskip_dim=\dimen171
+\l__tblr_row_ht_dim=\dimen172
+\l__tblr_row_dp_dim=\dimen173
+\l__tblr_row_abovesep_dim=\dimen174
+\l__tblr_row_belowsep_dim=\dimen175
+\l__tblr_row_vlines_box=\box73
+\l__tblr_vline_box=\box74
+\l__tblr_cell_box=\box75
+\l__row_upper_dim=\dimen176
+\l__row_lower_dim=\dimen177
+\l__row_vpace_dim=\dimen178
+\l__tblr_vline_aboveskip_dim=\dimen179
+\l__tblr_vline_belowskip_dim=\dimen180
+\l__tblr_cell_wd_dim=\dimen181
+\l__tblr_cell_ht_dim=\dimen182
+\l__tblr_diag_box=\box76
+) (./table.aux)
+\openout1 = `table.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+
+(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count289
+\scratchdimen=\dimen183
+\scratchbox=\box77
+\nofMPsegments=\count290
+\nofMParguments=\count291
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count292
+\MPscratchDim=\dimen184
+\MPnumerator=\count293
+\makeMPintoPDFobject=\count294
+\everyMPtoPDFconversion=\toks20
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ninecolors/ninecolors.sty
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-02-18 L3 Experimental document command parser
+))
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 30.
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./table.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 4985 strings out of 474143
+ 113618 string characters out of 5744767
+ 2038187 words of memory out of 5000000
+ 27336 multiletter control sequences out of 15000+600000
+ 561599 words of font info for 42 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 65i,6n,99p,2143b,1267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+
+Output written on table.pdf (1 page, 16152 bytes).
+PDF statistics:
+ 13 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
