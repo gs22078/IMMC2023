@@ -1,14 +1,12 @@
-from data import EMPLOYMENT_COEFFICIENT, AREA, \
-    SOCIAL_VALUE, CAT, SUBCATS, NUM_SUBCATS, ENVIRONMENTAL_VALUE, SALES_PER_UNIT_AREA, \
-    alpha, Z_1, Z_2, Z_3, threshold
-import math
+from data import EMPLOYMENT_COEFFICIENT, AREA, SOCIAL_VALUE, CAT, SUBCATS, NUM_SUBCATS, ENVIRONMENTAL_VALUE, \
+    SALES_PER_UNIT_AREA, alpha, Z_1, Z_2, Z_3, threshold
 import numpy as np
 
 np.set_printoptions(suppress=True)
 np.seterr(divide='ignore', invalid='ignore')
 
 ECONOMIC_VALUE = SALES_PER_UNIT_AREA * (1 + alpha / EMPLOYMENT_COEFFICIENT)
-ECONOMIC_VALUE = np.nan_to_num(ECONOMIC_VALUE) / 10
+ECONOMIC_VALUE = np.nan_to_num(ECONOMIC_VALUE) / 50
 
 
 def intrinsic_value(cat, subcat, size):

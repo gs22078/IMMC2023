@@ -249,11 +249,11 @@ CHARACTERISTIC_DISTANCE = np.array(CHARACTERISTIC_DISTANCE)
 
 LAND_DIMENSION = (10, 10)
 POPULATION_SIZE = 100
-MAX_GENERATION = 100
+MAX_GENERATION = 50
 MUTATION_RATE = 0.2
-CROSSOVER_RATE = 0.8
+CROSSOVER_RATE = 0.9
 ELITISM_RATE = 0.1
-ROULETTE_RATE = 0.3
+ROULETTE_RATE = 0.4
 
 alpha = 5  # alpha is the weight of employment in the economic value
 threshold = 10  # threshold is the threshold of the environmental value

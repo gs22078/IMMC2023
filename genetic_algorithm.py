@@ -2,9 +2,9 @@ from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
 from eval import intrinsic_value, interaction_value
-from data import CAT, NUM_SUBCATS, INTERACTION_MODEL, CHARACTERISTIC_DISTANCE, LAND_DIMENSION, \
-    POPULATION_SIZE, MAX_GENERATION, MUTATION_RATE, CROSSOVER_RATE, ELITISM_RATE, INTERACTION_COEFFICIENT, \
-    ROULETTE_RATE, COLORS_DICT, SALES_PER_UNIT_AREA, preamble, post
+from data import CAT, NUM_SUBCATS, INTERACTION_MODEL, CHARACTERISTIC_DISTANCE, LAND_DIMENSION, POPULATION_SIZE, \
+    MAX_GENERATION, MUTATION_RATE, CROSSOVER_RATE, ELITISM_RATE, INTERACTION_COEFFICIENT, ROULETTE_RATE, COLORS_DICT, \
+    preamble, post
 
 from time import time
 import os
@@ -13,6 +13,8 @@ from scipy.spatial.distance import pdist
 np.set_printoptions(suppress=True)
 
 os.makedirs('table', exist_ok=True)
+
+
 def find_group_borders(arr):
     diff = np.diff(arr.T, axis=0)
     vlines = {g: np.where(d != 0)[0] + 1 for g, d in zip(range(2, arr.shape[1] + 1), diff)}
@@ -39,8 +41,9 @@ def color_cat(cat):
         col_str += ', '.join(
             [
                 f'{f"vline{{{idx[i] + 2}-{idx[i + 1]}}}={{{k}}}{{{COLORS_DICT[val[i] % len(COLORS_DICT)]}}}," if idx[i] + 2 <= idx[i + 1] else ""}'
-                f'cell{{{k}}}{{{idx[i] + 1}-{idx[i + 1]}}}={{}}{{{COLORS_DICT[val[i] % len(COLORS_DICT)]}}}' for i in
-                range(len(idx) - 1)]
+                f'cell{{{k}}}{{{idx[i] + 1}-{idx[i + 1]}}}={{}}{{{COLORS_DICT[val[i] % len(COLORS_DICT)]}}}'
+                for i in range(len(idx) - 1)
+            ]
         ) + ', '
 
     arr = cat.copy()
@@ -50,17 +53,14 @@ def color_cat(cat):
               enumerate(zip(range(1, arr.shape[1] + 1), diff_t))}
     for k, (idx, val) in colors.items():
         col_str += ''.join(
-            [f'hline{{{idx[i] + 2}-{idx[i + 1]}}}={{{k}}}{{{COLORS_DICT[val[i] % len(COLORS_DICT)]}}}, ' if idx[
-                                                                                                                i] + 2 <=
-                                                                                                            idx[
-                                                                                                                i + 1] else ""
-             for i in range(len(idx) - 1)]
-        )
+            [
+                f'hline{{{idx[i] + 2}-{idx[i + 1]}}}={{{k}}}{{{COLORS_DICT[val[i] % len(COLORS_DICT)]}}}, '
+                if idx[i] + 2 <= idx[i + 1] else "" for i in range(len(idx) - 1)
+            ])
     return col_str + '\n'
 
 
 class UrbanPlanning:
-    # print(SALES_PER_UNIT_AREA)
     print(intrinsic_value(0, 0, 1))
 
     def __init__(self, land_dimension, population_size, max_generation, mutation_rate, crossover_rate, elitism_rate,
@@ -135,9 +135,13 @@ class UrbanPlanning:
         elites = population[:num_elites]
         fitness = fitness[num_elites:]
         population = population[num_elites:]
+        fitness = np.nan_to_num(fitness)
         fitness = fitness - np.min(fitness)
         fitness = np.nan_to_num(fitness)
-        relative_fitness = fitness / np.sum(fitness)
+        if np.sum(fitness) == 0:
+            relative_fitness = np.ones_like(fitness) / len(fitness)
+        else:
+            relative_fitness = fitness / np.sum(fitness)
         num_roulette = int(self.population_size * self.roulette_rate)
         chosen_indices = np.random.choice(len(population), size=num_roulette,
                                           p=relative_fitness)
@@ -208,49 +212,7 @@ class UrbanPlanning:
         return children
 
     def mutation(self, population):
-        # # mutate the group's cat and subcat
-        # num_mutation = int(self.population_size * self.mutation_rate)
-        # num_parents = len(population)
-        # parents = population
-        # children = []
-        # for i in range(num_mutation):
-        #     parent = parents[np.random.randint(0, num_parents)]
-        #     child = parent.copy()
-        #     child['cat'] = np.random.randint(0, len(CAT), self.land_dimension)
-        #     child['subcat'] = np.array([np.random.randint(0, NUM_SUBCATS[c], self.land_dimension) for c in child['cat']])
-        #     children.append(child)
-        # children = np.array(children)
-        # return children
         return population
-
-    def simple_run(self):
-        st = time()
-
-        population = self.initialize()
-        values = self.fitness(population)
-        print("max:", values.max(), "min:", values.min(), "mean:", values.mean())
-
-        parents = self.selection(population)
-        values = self.fitness(parents)
-        # print(values)
-        print("max:", values.max(), "min:", values.min(), "mean:", values.mean())
-
-        children = self.crossover(parents)
-        values = self.fitness(children)
-        # print(values)
-        print("max:", values.max(), "min:", values.min(), "mean:", values.mean())
-
-        children = self.mutation(children)
-        values = self.fitness(children)
-        # print(values)
-        print("max:", values.max(), "min:", values.min(), "mean:", values.mean())
-
-        population = np.concatenate((parents, children))
-        values = self.fitness(population)
-        # print(values)
-        print("max:", values.max(), "min:", values.min(), "mean:", values.mean())
-
-        print(time() - st)
 
     def plot(self, individual):
         # I will draw three subplots
@@ -271,8 +233,8 @@ class UrbanPlanning:
         # show legend for each color as a category, and locate it at the outside top right of the plot
         cat_list = [CAT[c] for c in cats]
         ax2.legend([plt.Rectangle((0, 0), 1, 1, fc=cm) for cm in (
-        plt.cm.tab20.colors[0], plt.cm.tab20.colors[4], plt.cm.tab20.colors[8], plt.cm.tab20.colors[13],
-        plt.cm.tab20.colors[16], plt.cm.tab20.colors[19])], cat_list, bbox_to_anchor=(1.3, 1.2))
+            plt.cm.tab20.colors[0], plt.cm.tab20.colors[4], plt.cm.tab20.colors[8], plt.cm.tab20.colors[13],
+            plt.cm.tab20.colors[16], plt.cm.tab20.colors[19])], cat_list, bbox_to_anchor=(1.3, 1.2))
         ax2.title.set_text('Categories')
         plt.show()
 
@@ -326,7 +288,7 @@ class UrbanPlanning:
 
 
 if __name__ == '__main__':
-    np.random.seed(20)
+    np.random.seed(42)
     ga = UrbanPlanning(LAND_DIMENSION, POPULATION_SIZE, MAX_GENERATION, MUTATION_RATE, CROSSOVER_RATE, ELITISM_RATE,
                        ROULETTE_RATE)
     ga.run()
